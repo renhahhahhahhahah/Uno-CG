@@ -1,0 +1,152 @@
+[gd_scene load_steps=11 format=3 uid="uid://c8q6mj2l7qgxv"]
+
+[ext_resource type="Script" uid="uid://h8j5e7hagnro" path="res://scripts/main_menu.gd" id="1_m4k2p"]
+[ext_resource type="Texture2D" uid="uid://ba5rogdslrnkd" path="res://Asset Lib/Table_2.png" id="2_xxxxx"]
+[ext_resource type="Texture2D" uid="uid://be67vxv78ar1e" path="res://Asset Lib/uno Game.png" id="3_5dd4i"]
+[ext_resource type="Texture2D" uid="uid://c5qxmviyw2vu" path="res://Asset Lib/Yellow_1.png" id="4_lgwnu"]
+[ext_resource type="Texture2D" uid="uid://bet7rjn6p0t3" path="res://Asset Lib/Red_7.png" id="5_flqon"]
+[ext_resource type="Texture2D" uid="uid://dxcglfdi7phdr" path="res://Asset Lib/Green_8.png" id="6_rcqid"]
+[ext_resource type="Texture2D" uid="uid://0ct48kgi5tle" path="res://Asset Lib/Blue_4.png" id="7_1ajci"]
+[ext_resource type="Texture2D" uid="uid://djks7171b6ild" path="res://Asset Lib/Deck.png" id="8_7b55j"]
+[ext_resource type="Texture2D" uid="uid://deua8sosbgnki" path="res://Asset Lib/Wild_Draw.png" id="9_5pajh"]
+[ext_resource type="Texture2D" uid="uid://b1knloie42i1q" path="res://Asset Lib/Wild.png" id="10_j7ex8"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_m4k2p")
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_xxxxx")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -150.0
+offset_right = 200.0
+offset_bottom = 150.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 50
+alignment = 1
+
+[node name="Logo" type="TextureRect" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+expand_mode = 1
+stretch_mode = 5
+
+[node name="ButtonContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="PlayButton" type="Button" parent="VBoxContainer/ButtonContainer"]
+custom_minimum_size = Vector2(150, 50)
+layout_mode = 2
+theme_override_colors/font_disabled_color = Color(0.5, 0.5, 0.5, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.8, 0.8, 0.8, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0.5)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.8, 0.8, 0.8, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 24
+text = "Play Game"
+
+[node name="QuitButton" type="Button" parent="VBoxContainer/ButtonContainer"]
+custom_minimum_size = Vector2(150, 50)
+layout_mode = 2
+theme_override_colors/font_disabled_color = Color(0.5, 0.5, 0.5, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.8, 0.8, 0.8, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0.5)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.8, 0.8, 0.8, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 24
+text = "Quit"
+
+[node name="UnoGame" type="Sprite2D" parent="."]
+position = Vector2(576, 263)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("3_5dd4i")
+
+[node name="Yellow1" type="Sprite2D" parent="."]
+position = Vector2(34, 67)
+rotation = -0.34383
+scale = Vector2(0.43, 0.43)
+texture = ExtResource("4_lgwnu")
+
+[node name="Red7" type="Sprite2D" parent="."]
+position = Vector2(49, 53)
+rotation = -0.689405
+scale = Vector2(0.42, 0.42)
+texture = ExtResource("5_flqon")
+
+[node name="Green8" type="Sprite2D" parent="."]
+position = Vector2(60, 19)
+rotation = -1.03323
+scale = Vector2(0.41, 0.41)
+texture = ExtResource("6_rcqid")
+
+[node name="Red8" type="Sprite2D" parent="."]
+position = Vector2(1040, 633)
+rotation = -0.860447
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("5_flqon")
+
+[node name="Yellow2" type="Sprite2D" parent="."]
+position = Vector2(1077, 613)
+rotation = -0.689405
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("4_lgwnu")
+
+[node name="Blue4" type="Sprite2D" parent="."]
+position = Vector2(1136, 595)
+rotation = -0.516617
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("7_1ajci")
+
+[node name="Deck" type="Sprite2D" parent="."]
+position = Vector2(1094, 71)
+rotation = -0.689405
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("8_7b55j")
+
+[node name="Deck2" type="Sprite2D" parent="."]
+position = Vector2(1112, 47)
+rotation = -0.514872
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("8_7b55j")
+
+[node name="WildDraw" type="Sprite2D" parent="."]
+position = Vector2(-1.99997, 615)
+rotation = 1.03323
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("9_5pajh")
+
+[node name="Wild" type="Sprite2D" parent="."]
+position = Vector2(-45, 578)
+rotation = 1.03323
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("10_j7ex8")

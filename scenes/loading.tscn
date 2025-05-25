@@ -1,0 +1,92 @@
+[gd_scene load_steps=7 format=3 uid="uid://b6i7vn2eulex"]
+
+[ext_resource type="Script" uid="uid://bj1v0ts3ehs1s" path="res://scripts/loading.gd" id="1_xxxxx"]
+[ext_resource type="Texture2D" uid="uid://ba5rogdslrnkd" path="res://Asset Lib/Table_2.png" id="2_xxxxx"]
+[ext_resource type="Texture2D" uid="uid://df81nbkw7lc03" path="res://Asset Lib/Yellow_Reverse.png" id="3_xxxxx"]
+[ext_resource type="Texture2D" uid="uid://bq7ggveoxglcf" path="res://Asset Lib/Red_Reverse.png" id="4_xxxxx"]
+[ext_resource type="Texture2D" uid="uid://b2njcul3juvv5" path="res://Asset Lib/Green_Reverse.png" id="5_xxxxx"]
+[ext_resource type="Texture2D" uid="uid://bmcpq3q88yiow" path="res://Asset Lib/Blue_Reverse.png" id="6_xxxxx"]
+
+[node name="Loading" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xxxxx")
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_xxxxx")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -100.0
+offset_right = 200.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 30
+alignment = 1
+
+[node name="LoadingLabel" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0.5)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 48
+text = "Loading..."
+horizontal_alignment = 1
+
+[node name="ProgressBar" type="ProgressBar" parent="VBoxContainer"]
+custom_minimum_size = Vector2(400, 30)
+layout_mode = 2
+value = 50.0
+show_percentage = false
+
+[node name="LoadingDots" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0.5)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 32
+text = "..."
+horizontal_alignment = 1
+
+[node name="YellowReverse" type="Sprite2D" parent="."]
+position = Vector2(565, 157)
+rotation = 1.03323
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("3_xxxxx")
+
+[node name="RedReverse" type="Sprite2D" parent="."]
+position = Vector2(563, 161)
+rotation = 0.603884
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("4_xxxxx")
+
+[node name="GreenReverse" type="Sprite2D" parent="."]
+position = Vector2(552, 167)
+rotation = 0.34383
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_xxxxx")
+
+[node name="BlueReverse" type="Sprite2D" parent="."]
+position = Vector2(539, 171)
+rotation = 0.171042
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("6_xxxxx")
